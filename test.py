@@ -10,7 +10,7 @@ vo = VisualOdometry(cam, './dataset/poses/00.txt')
 
 traj = np.zeros((400,400,3), dtype=np.uint8)
 
-for img_id in xrange(num_img):
+for img_id in range(num_img):
 	img = cv2.imread('./dataset/sequences/00/image_0/'+str(img_id).zfill(6)+'.png', 0)
 
 	vo.update(img, img_id)
