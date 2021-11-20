@@ -23,8 +23,8 @@ for img_id in range(num_img):
 	draw_x, draw_y = int(x)+200, int(z)+60
 	true_x, true_y = int(vo.trueX)+200, int(vo.trueZ)+60
 
-	cv2.circle(traj, (draw_x,draw_y), 1, (img_id*255/num_img,255-img_id*255/num_img,0), 1)
 	cv2.circle(traj, (true_x,true_y), 1, (0,0,255), 2)
+	cv2.circle(traj, (draw_x,draw_y), 1, (img_id*255/num_img,255-img_id*255/num_img,0), 1)
 	cv2.rectangle(traj, (10, 20), (500, 60), (0,0,0), -1)
 	text = "Coordinates: x=%2fm y=%2fm z=%2fm"%(x,y,z)
 	cv2.putText(traj, text, (20,40), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255), 1, 8)
