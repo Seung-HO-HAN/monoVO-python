@@ -3,7 +3,7 @@ import cv2
 
 from visual_odometry import PinholeCamera, VisualOdometry
 
-num_img = 1000
+num_img = 500
 
 cam = PinholeCamera(1241.0, 376.0, 718.8560, 718.8560, 607.1928, 185.2157)
 vo = VisualOdometry(cam, './datasets/KITTI_dataset/poses/00.txt')
